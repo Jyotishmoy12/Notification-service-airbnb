@@ -7,6 +7,7 @@ function connectToRedis() {
     const redisConfig = {
       port: serverConfig.REDIS_PORT,
       host: serverConfig.REDIS_HOST,
+      maxRetriesPerRequest: null, // to prevent the client from exiting after a certain number of retries
     }; 
 
     return () =>{
